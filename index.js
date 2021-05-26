@@ -6,5 +6,5 @@
 // const AI = require("./Classes/ai");
 
 
-// let game = new Game();
-// game.runGame();
+let game = new Game();
+game.runGame();

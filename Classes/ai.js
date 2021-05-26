@@ -2,10 +2,16 @@
 
 const Player = require("./player");
 
-
-Class AI extends Player {
-    constructor ();
-    super();
+class AI extends Player() {
+    constructor(name, score){
+    super(name, score);
+    }
+    generateRandomGesture() {
+        let randomGesture = Math.floor(Math.random();
+        return randomGesture;
+    }
 }
 
+
 module.exports = AI;
+

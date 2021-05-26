@@ -3,8 +3,8 @@
 const Player = require("./player");
 
  class Human extends Player {
-     constructor(name) {
-         super(name);
+     constructor(name, score) {
+         super(name, score);
      }
  }
 

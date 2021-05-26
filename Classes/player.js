@@ -1,7 +1,7 @@
 "use strict";
 
 class Player {
-    constructor(name) {
+    constructor(name, score) {
         this.name = name;
         this.score = score;
         this.chosenGesture = ""

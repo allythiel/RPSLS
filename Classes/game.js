@@ -1,6 +1,5 @@
 "use strict";
 
-const Player = require('./player');
 const Human = require('./human');
 const AI = require('./ai');
 const prompt = require('prompt-sync')(); 
@@ -10,14 +9,14 @@ class Game {
         
     }
     runGame() { // "main" method
-
+        displayrules();
        
     }
 }
 
 module.exports = Game;
 
-// * Rock crushes Scissors
+// Rock crushes Scissors
 // Scissors cuts Paper
 // Paper covers Rock
 // Rock crushes Lizard
