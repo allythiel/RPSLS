@@ -1,9 +1,15 @@
 "use strict";
 
 class Player {
-    constructor() {
-
+    constructor(name) {
+        this.name = name;
+        this.score = score;
+        this.chosenGesture = ""
+        this.gestureArrary = ["rock", "paper", "scissors", "lizard", "spock"];
+    }
+    chosenGesture() {
+        
     }
 }
 
-module.exports = Player 
+module.exports = Player;

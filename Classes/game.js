@@ -1,5 +1,22 @@
 "use strict";
 
+const Player = require('./player');
+const Human = require('./human');
+const AI = require('./ai');
+const prompt = require('prompt-sync')(); 
+
+class Game {
+    constructor() {
+        
+    }
+    runGame() { // "main" method
+
+       
+    }
+}
+
+module.exports = Game;
+
 // * Rock crushes Scissors
 // Scissors cuts Paper
 // Paper covers Rock
@@ -9,4 +26,4 @@
 // Scissors decapitates Lizard
 // Lizard eats Paper
 // Paper disproves Spock
-// Spock vaporizes Rock
+// Spock vaporizes Rock 
