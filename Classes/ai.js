@@ -6,7 +6,7 @@ class AI extends Player() {
     constructor(name, score){
     super(name, score);
     }
-    // Generates Random Number. Rounds down to nearest whole number to assign to value. 
+    // generates random number to correlate with given number of gesture. Ensures rounding down to a whole number. 
     generateRandomGesture() {
         let randomGesture = Math.floor(Math.random());
         return randomGesture;
