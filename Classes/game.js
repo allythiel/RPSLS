@@ -10,6 +10,9 @@ class Game {
     }
     runGame() { // "main" method
         displayrules();
+        selectPlayers()
+        selectGesture()
+        determineWinner()
        
     }
     displayrules() {
@@ -18,6 +21,22 @@ class Game {
         console.log("To play, pick a number that corresponds to a gesture that you would like to play");
         console.log("Best of three, wins!");
     }
+    // PLAYVER VS PLAYER OR PLAYVER VS COMPUTER SELECTION
+    selectPlayers() { 
+
+    }
+    // PROMPT PLAYER TO SELECT GESTURE(NUMBER). ELSE, RETRIEVE RANDOM NUMBER FOR AI SELECTION.
+    selectGesture(){
+
+    }
+    //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
+    determineWinner(){
+
+    }
+    //DETERMINES WINNER OF GAME
+    finalScore(){
+
+   }
 
 }
 
