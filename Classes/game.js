@@ -23,10 +23,19 @@ class Game {
     }
     // PLAYVER VS PLAYER OR PLAYVER VS COMPUTER SELECTION
     selectPlayers() { 
+        prompt("Would you like to play against another human or a computer?");
+        // SWITCH CASE
 
     }
     // PROMPT PLAYER TO SELECT GESTURE(NUMBER). ELSE, RETRIEVE RANDOM NUMBER FOR AI SELECTION.
-    selectGesture(){
+    selectGesture(number){
+        let rock = 0;
+        let paper = 1;
+        let scissors = 2;
+        let lizard = 3;
+        let spock = 4;
+        prompt("Select the number that corresponds to the gesture you'd like to play." + "\n", "0 - ROCK" + "\n", "1 - PAPER" + "\n", "2 - SCISSORS" + "\n", "3 - LIZARD" + "\n", "4 - SPOCK" + "\n");
+
 
     }
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
