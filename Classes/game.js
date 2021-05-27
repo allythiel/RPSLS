@@ -15,7 +15,6 @@ class Game {
         this.selectPlayers();
         this.selectGesture();
         this.determineWinner();
-       
     }
     displayrules() {
         console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
@@ -39,16 +38,24 @@ class Game {
 
     }
     // PROMPT PLAYER TO SELECT GESTURE(NUMBER). ELSE, RETRIEVE RANDOM NUMBER FOR AI SELECTION.
-    selectGesture(number){
-        let rock = 0;
-        let paper = 1;
-        let scissors = 2;
-        let lizard = 3;
-        let spock = 4;
+    selectGesture(){
         console.log("Select the number that corresponds to the gesture you'd like to play.");
-        prompt("0 - ROCK, 1 - PAPER, 2 - SCISSORS, 3 - LIZARD, 4 - SPOCK");
-
-
+        let gestureChoice = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
+        if(gestureChoice === 1){
+            gestureChoice = "Rock";
+        }
+        else if(gestureChoice === 2) {
+            gestureChoice = "Paper";
+        }
+        else if(gestureChoice === 3) {
+            gestureChoice = "Scissors";
+        }
+        else if(gestureChoice === 4) {
+            gestureChoice = "Lizard";
+        }
+        else if(gestureChoice === 5){
+            gestureChoice = "Spock";
+        }
     }
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
     determineWinner(){

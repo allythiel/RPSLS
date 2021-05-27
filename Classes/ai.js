@@ -9,7 +9,7 @@ class AI extends Player {
     }
     // generates random number to correlate with given number of gesture. Ensures rounding down to a whole number. 
     generateRandomGesture() {
-        let randomGesture = Math.floor(Math.random() * 4);
+        let randomGesture = Math.floor(Math.random() * 5);
         return randomGesture;
     }
 }
