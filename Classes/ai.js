@@ -16,9 +16,3 @@ class AI extends Player {
 
 
 module.exports = AI;
-
-// 0 = rock
-// 1 = paper
-// 2 = scissors
-// 3 = lizard
-// 4 = spock
