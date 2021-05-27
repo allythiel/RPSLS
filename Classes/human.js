@@ -1,10 +1,13 @@
 "use strict";
 
 const Player = require("./player");
+const prompt = require("prompt-sync")();
 
  class Human extends Player {
-     constructor(name, score) {
-         super(name, score);
+     constructor() {
+         super();
+         let userName = prompt("What is your name?");
+         this.name = userName
      }
  }
 

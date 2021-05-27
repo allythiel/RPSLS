@@ -2,17 +2,19 @@
 
 const Human = require('./human');
 const AI = require('./ai');
+const Player = require('./player');
 const prompt = require('prompt-sync')(); 
 
 class Game {
     constructor() {
-        
+        this.playerOne = new Human;
+        this.playerTwo = new Player; 
     }
     runGame() { // "main" method
-        displayrules();
-        selectPlayers()
-        selectGesture()
-        determineWinner()
+        this.displayrules();
+        this.selectPlayers();
+        this.selectGesture();
+        this.determineWinner();
        
     }
     displayrules() {
@@ -21,10 +23,19 @@ class Game {
         console.log("To play, pick a number that corresponds to a gesture that you would like to play");
         console.log("Best of three, wins!");
     }
-    // PLAYVER VS PLAYER OR PLAYVER VS COMPUTER SELECTION
+    // PLAYER VS PLAYER OR PLAYER VS COMPUTER SELECTION
     selectPlayers() { 
-        prompt("Would you like to play against another human or a computer?");
-        // SWITCH CASE
+        let playerSelection = prompt("Would you like to play against another human or a computer?");
+        switch(playerSelection){
+            case "human":
+                this.playerTwo = new Human();
+            break;
+            case "computer":
+                this.playerTwo = new AI;
+            break;
+            default:
+            return (this.runGame);
+        }
 
     }
     // PROMPT PLAYER TO SELECT GESTURE(NUMBER). ELSE, RETRIEVE RANDOM NUMBER FOR AI SELECTION.
@@ -34,7 +45,8 @@ class Game {
         let scissors = 2;
         let lizard = 3;
         let spock = 4;
-        prompt("Select the number that corresponds to the gesture you'd like to play." + "\n", "0 - ROCK" + "\n", "1 - PAPER" + "\n", "2 - SCISSORS" + "\n", "3 - LIZARD" + "\n", "4 - SPOCK" + "\n");
+        console.log("Select the number that corresponds to the gesture you'd like to play.");
+        prompt("0 - ROCK, 1 - PAPER, 2 - SCISSORS, 3 - LIZARD, 4 - SPOCK");
 
 
     }
