@@ -47,6 +47,30 @@ class Game {
     
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
     determineWinner(){
+        if(this.playerOne.chosenGesture == "Rock" && (this.playerTwo.chosenGesture == "Scissors" || "Lizard")){
+            console.log(this.playerOne.name + " wins this round!");
+            this.playerOne.score += 1;
+        }
+        else if(this.playerOne.chosenGesture == "Paper" && (this.playerTwo.chosenGesture == "Rock" || "Spock")){
+            console.log(this.playerOne.name + " wins this round!");
+            this.playerOne.score += 1;
+        }
+        else if(this.playerOne.chosenGesture == "Scissors" && (this.playerTwo.chosenGesture == "Paper" || "Lizard")){
+            console.log(this.playerOne.name + " wins this round!");
+            this.playerOne.score += 1;
+        }
+        else if(this.playerOne.chosenGesture == "Lizard" && (this.playerTwo.chosenGesture == "Paper" || "Spock")){
+            console.log(this.playerOne.name + " wins this round!");
+            this.playerOne.score += 1;
+        }
+        else if(this.playerOne.chosenGesture == "Spock" && (this.playerTwo.chosenGesture == "Rock" || "Scissors")){
+            console.log(this.playerOne.name + " wins this round!");
+            this.playerOne.score += 1;
+        }
+        else(
+            console.log(this.playerTwo.name + " wins this round!")
+        );
+
 
     }
     //DETERMINES WINNER OF GAME
@@ -62,14 +86,3 @@ class Game {
 }
 
 module.exports = Game;
-
-// Rock crushes Scissors
-// Scissors cuts Paper
-// Paper covers Rock
-// Rock crushes Lizard
-// Lizard poisons Spock
-// Spock smashes Scissors
-// Scissors decapitates Lizard
-// Lizard eats Paper
-// Paper disproves Spock
-// Spock vaporizes Rock 
