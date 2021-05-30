@@ -4,6 +4,7 @@ const Human = require('./human');
 const AI = require('./ai');
 const Player = require('./player');
 const prompt = require('prompt-sync')(); 
+const { generateRandomGesture } = require('./ai');
 
 class Game {
     constructor() {
@@ -13,7 +14,8 @@ class Game {
     runGame() { // "main" method
         this.displayrules();
         this.selectPlayers();
-        this.selectGesture();
+        this.playerOneSelectGesture();
+        this.playerTwoSelectGesture();
         this.determineWinner();
     }
     displayrules() {
@@ -30,33 +32,62 @@ class Game {
                 this.playerTwo = new Human();
             break;
             case "computer":
-                this.playerTwo = new AI;
+                this.playerTwo = new AI();
             break;
             default:
             return (this.runGame);
         }
-
     }
-    // PROMPT PLAYER TO SELECT GESTURE(NUMBER). ELSE, RETRIEVE RANDOM NUMBER FOR AI SELECTION.
-    selectGesture(){
+    // PROMPT PLAYER TO SELECT GESTURE(NUMBER). 
+    playerOneSelectGesture(){
         console.log("Select the number that corresponds to the gesture you'd like to play.");
-        let gestureChoice = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
-        if(gestureChoice === 1){
-            gestureChoice = "Rock";
+        let gestureChoice1 = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
+        if(gestureChoice1 === 1){
+            gestureChoice1 = "Rock";
         }
-        else if(gestureChoice === 2) {
-            gestureChoice = "Paper";
+        else if(gestureChoice1 === 2) {
+            gestureChoice1 === "Paper";
         }
-        else if(gestureChoice === 3) {
-            gestureChoice = "Scissors";
+        else if(gestureChoice1 === 3) {
+            gestureChoice1 = "Scissors";
         }
-        else if(gestureChoice === 4) {
-            gestureChoice = "Lizard";
+        else if(gestureChoice1 === 4) {
+            gestureChoice1 = "Lizard";
         }
-        else if(gestureChoice === 5){
-            gestureChoice = "Spock";
+        else if(gestureChoice1 === 5){
+            gestureChoice1 = "Spock";
         }
+        return gestureChoice1;
     }
+
+    // PROMPT SECOND PLAYER TO SELECT GESTURE, OR SELECT RANDOM NUMBER (AI)
+    playerTwoSelectGesture(){
+        if(this.selectPlayers.playerSelection === "computer"){
+            let aiChoice = generateRandomGesture();
+            AI.generateRandomGesture();
+            return aiChoice;
+        }
+        else if(this.selectPlayers.playerSelection === "human"){
+            let gestureChoice2 = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
+            if(gestureChoice2 === 1){
+                gestureChoice2 = "Rock";
+            }
+            else if(gestureChoice2 === 2) {
+                gestureChoice2 = "Paper";
+            }
+            else if(gestureChoice2 === 3) {
+                gestureChoice2 = "Scissors";
+            }
+            else if(gestureChoice2 === 4) {
+                gestureChoice2 = "Lizard";
+            }
+            else if(gestureChoice2 === 5){
+                gestureChoice2 = "Spock";
+            }
+            return gestureChoice2;
+        }   
+    }
+    
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
     determineWinner(){
 
