@@ -38,38 +38,12 @@ class Game {
             return (this.runGame);
         }
     }
-    // PROMPT PLAYER TO SELECT GESTURE(NUMBER). 
-    playerOneSelectGesture(){
+    // PROMPTS PLAYER(HUMAN OR AI) TO SELECT A GESTURE(NUMBER). 
+    selectGesture(){
         this.playerOne.pickGestures();
+        this.playerTwo.pickGestures();
     }
 
-    // PROMPT SECOND PLAYER TO SELECT GESTURE, OR SELECT RANDOM NUMBER (AI)
-    playerTwoSelectGesture(){
-        if(this.selectPlayers.playerSelection === "computer"){
-            let aiChoice = generateRandomGesture();
-            AI.generateRandomGesture();
-            return aiChoice;
-        }
-        else if(this.selectPlayers.playerSelection === "human"){
-            let gestureChoice2 = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
-            if(gestureChoice2 === 1){
-                gestureChoice2 = "Rock";
-            }
-            else if(gestureChoice2 === 2) {
-                gestureChoice2 = "Paper";
-            }
-            else if(gestureChoice2 === 3) {
-                gestureChoice2 = "Scissors";
-            }
-            else if(gestureChoice2 === 4) {
-                gestureChoice2 = "Lizard";
-            }
-            else if(gestureChoice2 === 5){
-                gestureChoice2 = "Spock";
-            }
-            return gestureChoice2;
-        }   
-    }
     
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
     determineWinner(){
