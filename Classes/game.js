@@ -40,24 +40,7 @@ class Game {
     }
     // PROMPT PLAYER TO SELECT GESTURE(NUMBER). 
     playerOneSelectGesture(){
-        console.log("Select the number that corresponds to the gesture you'd like to play.");
-        let gestureChoice1 = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
-        if(gestureChoice1 === 1){
-            gestureChoice1 = "Rock";
-        }
-        else if(gestureChoice1 === 2) {
-            gestureChoice1 === "Paper";
-        }
-        else if(gestureChoice1 === 3) {
-            gestureChoice1 = "Scissors";
-        }
-        else if(gestureChoice1 === 4) {
-            gestureChoice1 = "Lizard";
-        }
-        else if(gestureChoice1 === 5){
-            gestureChoice1 = "Spock";
-        }
-        return gestureChoice1;
+        this.playerOne.pickGestures();
     }
 
     // PROMPT SECOND PLAYER TO SELECT GESTURE, OR SELECT RANDOM NUMBER (AI)
