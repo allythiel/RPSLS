@@ -55,7 +55,7 @@ class Game {
             console.log(this.playerOne.name + " wins this game!");
         }
         else {
-            console.log(this.playerTwo.name + "wins this game!");
+            console.log(this.playerTwo.name + " wins this game!");
         }
    }
 
