@@ -2,6 +2,7 @@
 
 const Player = require("./player");
 const prompt = require("prompt-sync")();
+// const promptFor = require("./game");
 
  class Human extends Player {
      constructor() {

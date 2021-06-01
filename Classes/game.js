@@ -5,6 +5,7 @@ const AI = require('./ai');
 const Player = require('./player');
 const prompt = require('prompt-sync')(); 
 const { generateRandomGesture } = require('./ai');
+// const { default: validator } = require('validator');
 
 class Game {
     constructor() {
@@ -85,7 +86,15 @@ class Game {
             else {
             console.log(this.playerTwo.name + " wins this game!");
             }
-         }
+    }
+
+    // VALIDATES RESPONSES ** CURRENTLY DOES NOT WORK. 
+//      promptFor(question, validator){
+//         do{
+//             var response = prompt(question).trim();
+//         } while(!response || !validator(response));
+//         return response;
+//         }
 }
 
 module.exports = Game;
