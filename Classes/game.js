@@ -41,7 +41,9 @@ class Game {
     }
     // PROMPTS PLAYER(HUMAN OR AI) TO SELECT A GESTURE(NUMBER). 
     selectGesture(){
+        console.log(this.playerOne.name +"'s Turn!");
         this.playerOne.pickGestures();
+        console.log(this.playerTwo.name + "'s")
         this.playerTwo.pickGestures();
     }
 
