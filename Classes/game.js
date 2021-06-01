@@ -75,14 +75,15 @@ class Game {
     }
     //DETERMINES WINNER OF GAME
     finalScore(){
-        if(this.playerOne.score > this.playerTwo.score) {
-            console.log(this.playerOne.name + " wins this game!");
-        }
-        else {
-            console.log(this.playerTwo.name + " wins this game!");
-        }
-   }
-
+        // while(this.playerOne.score < 3 && this.playerTwo.score < 3){
+        //     if(this.playerOne.score > this.playerTwo.score) {
+        //     console.log(this.playerOne.name + " wins this game!");
+        //     }
+        //     else {
+        //     console.log(this.playerTwo.name + " wins this game!");
+        //     }
+        //  }
+    }
 }
 
 module.exports = Game;
