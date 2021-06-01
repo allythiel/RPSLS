@@ -12,20 +12,20 @@ const prompt = require("prompt-sync")();
      pickGestures() {
         console.log("Select the number that corresponds to the gesture you'd like to play.");
 
-        let gestureChoice = prompt("1 - ROCK, 2 - PAPER, 3 - SCISSORS, 4 - LIZARD, 5 - SPOCK ");
-        if(gestureChoice === "1"){
+        let gestureChoice = prompt("0 - ROCK, 1 - PAPER, 2 - SCISSORS, 3 - LIZARD, 4 - SPOCK ");
+        if(gestureChoice === "0"){
             this.chosenGesture = "Rock";
         }
-        else if(gestureChoice === "2") {
+        else if(gestureChoice === "1") {
             this.chosenGesture = "Paper";
         }
-        else if(gestureChoice === "3") {
+        else if(gestureChoice === "2") {
             this.chosenGesture = "Scissors";
         }
-        else if(gestureChoice === "4") {
+        else if(gestureChoice === "3") {
             this.chosenGesture = "Lizard";
         }
-        else if(gestureChoice === "5"){
+        else if(gestureChoice === "4"){
             this.chosenGesture = "Spock";
         }
         return this.chosenGesture;
