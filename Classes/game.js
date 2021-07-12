@@ -50,23 +50,23 @@ class Game {
     
     //DETERMINES WINNER OF EACH ROUND. ADDS TO CURRENT COUNT.
     determineWinner(){
-        if(this.playerOne.chosenGesture == "Rock" && (this.playerTwo.chosenGesture == "Scissors" || "Lizard")){
+        if(this.playerOne.chosenGesture == "Rock" && (this.playerTwo.chosenGesture == "Scissors" || this.playerTwo.chosenGesture == "Lizard")){
             console.log(this.playerOne.name + " wins this round!");
             this.playerOne.score += 1;
         }
-        else if(this.playerOne.chosenGesture == "Paper" && (this.playerTwo.chosenGesture == "Rock" || "Spock")){
+        else if(this.playerOne.chosenGesture == "Paper" && (this.playerTwo.chosenGesture == "Rock" || this.playerTwo.chosenGesture == "Spock")){
             console.log(this.playerOne.name + " wins this round!");
             this.playerOne.score += 1;
         }
-        else if(this.playerOne.chosenGesture == "Scissors" && (this.playerTwo.chosenGesture == "Paper" || "Lizard")){
+        else if(this.playerOne.chosenGesture == "Scissors" && (this.playerTwo.chosenGesture == "Paper" || this.playerTwo.chosenGesture == "Lizard")){
             console.log(this.playerOne.name + " wins this round!");
             this.playerOne.score += 1;
         }
-        else if(this.playerOne.chosenGesture == "Lizard" && (this.playerTwo.chosenGesture == "Paper" || "Spock")){
+        else if(this.playerOne.chosenGesture == "Lizard" && (this.playerTwo.chosenGesture == "Paper" || this.playerTwo.chosenGesture == "Spock")){
             console.log(this.playerOne.name + " wins this round!");
             this.playerOne.score += 1;
         }
-        else if(this.playerOne.chosenGesture == "Spock" && (this.playerTwo.chosenGesture == "Rock" || "Scissors")){
+        else if(this.playerOne.chosenGesture == "Spock" && (this.playerTwo.chosenGesture == "Rock" || this.playerTwo.chosenGesture == "Scissors")){
             console.log(this.playerOne.name + " wins this round!");
             this.playerOne.score += 1;
         }
